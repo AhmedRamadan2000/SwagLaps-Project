@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="SwagLaps-Project(failed)">
+    <classes>
+      <class name="testcases.TC05_Confirm_Order">
+        <methods>
+          <include name="Confirm_Order"/>
+          <include name="setupChromeDriver"/>
+        </methods>
+      </class> <!-- testcases.TC05_Confirm_Order -->
+    </classes>
+  </test> <!-- SwagLaps-Project(failed) -->
+</suite> <!-- Failed suite [Default Suite] -->
