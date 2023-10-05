@@ -3,12 +3,12 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class P03_CheckoutOrder {
+public class P04_CheckoutOrder {
     WebDriver driver;
 
     //ToDo: define driver
 
-    public P03_CheckoutOrder(WebDriver driver) {
+    public P04_CheckoutOrder(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -16,7 +16,7 @@ public class P03_CheckoutOrder {
     private final By CheckOutButton = By.xpath("//a[contains(text(),'CHECKOUT')]");
 
     //ToDo: add action methods
-    public P03_CheckoutOrder ClickOnCheckOutButton() {
+    public P04_CheckoutOrder ClickOnCheckOutButton() {
         driver.findElement(this.CheckOutButton).click();
         return this;
     }

@@ -24,8 +24,8 @@ public class TestBase {
         driver.get("https://www.saucedemo.com/v1/");
     }
 
-//    @AfterTest
-//    public void quite() {
-//        driver.quit();
-//    }
+    @AfterTest
+    public void quite() {
+        driver.quit();
+    }
 }

@@ -6,76 +6,62 @@ import org.testng.annotations.Test;
 import pages.*;
 import utility.Utilities;
 
-import static org.testng.Assert.assertEquals;
-
-public class TC05_Confirm_Order extends TestBase {
+public class TC07_ConfirmOrderWithRandomProducts extends TestBase {
     private final String Username = "standard_user";
     private final String Password = "secret_sauce";
     public static Faker faker = new Faker();
     public static String firstname = faker.name().firstName();
     public static String lastname = faker.name().lastName();
     public static String code = "12365";
-    public String total = "129.94";
+public double totalofproductsprices =new P03_AddRandomProductsToCart(driver).getTotalPrice();
 
-    @Test(enabled = true)
-    public void Confirm_Order() {
+    @Test()
+    public void Confirm_Order() throws InterruptedException {
 
         //ToDo: Login to site
         new P01_LoginPage(driver).enterEmail(Username).enterPassword(Password).clickLoginButton();
 
         //ToDo: Adding the Products To Shopping Cart
-        new P02_AddProductsToCart(driver).addProductsToCart();
-
-        //ToDo: Navigate To Shopping Cart
-        new P02_AddProductsToCart(driver).clickOnCartIcon();
-
-        //ToDo: Get total price
-        new P02_AddProductsToCart(driver).getPricesFromCart();
+        new P03_AddRandomProductsToCart(driver).addRandomProductToCartAndGetPrices();
 
         //ToDo: Take a screenshot
         Utilities.Capturescreenshots(driver, "AddProductsToShoppingCart");
 
-        //ToDo: Assert the validation message appears
-        Assert.assertTrue(new P02_AddProductsToCart(driver).numberOnCartIcon());
-
         //ToDo: Click on the checkout button
-        new P03_CheckoutOrder(driver).ClickOnCheckOutButton();
+        new P04_CheckoutOrder(driver).ClickOnCheckOutButton();
 
         //ToDo: Assert the user in the Checkout Information page
-        new P04_Checkout_Your_Information(driver).PageTitle();
+        new P05_CheckoutYourInformation(driver).PageTitle();
 
         //ToDo: Add Checkout Information
-        new P04_Checkout_Your_Information(driver).addFirstName(firstname).addLastName(lastname).addPostalCode(code);
+        new P05_CheckoutYourInformation(driver).addFirstName(firstname).addLastName(lastname).addPostalCode(code).ClickOnContinueButton();
 
         //ToDo: Take a screenshot
         Utilities.Capturescreenshots(driver, "Checkout Information2");
 
-        //ToDo: Click on the continue button
-        new P04_Checkout_Your_Information(driver).ClickOnContinueButton();
-
-        //ToDo: Take a screenshot
-        Utilities.Capturescreenshots(driver, "Finish Order");
-
         //ToDo: Assert the sub total appears
-        new P05_Confirm_Order(driver).subTotal();
+        new P07_ConfirmOrderWithRandomProducts(driver).getSubTotal();
 
         //ToDo: Assert the tax appears
-        new P05_Confirm_Order(driver).tax();
+        new P07_ConfirmOrderWithRandomProducts(driver).getTax();
 
         //ToDo: Assert the total appears
-        new P05_Confirm_Order(driver).total();
+        new P07_ConfirmOrderWithRandomProducts(driver).total();
 
         //ToDo: Assert the total in cart is equal total price
-assertEquals(P02_AddProductsToCart.cartTota, total,"is match");
+//       Assert.assertEquals(totalofproductsprices,new P07_ConfirmOrderWithRandomProducts(driver).getSubTotal(),"The total item prices in cart is equal total price");
+
+        //ToDo: Assert the subtotal + tax is equal the total price
+        Assert.assertEquals(new P07_ConfirmOrderWithRandomProducts(driver).calculateSubTotalPlusTax(),new P07_ConfirmOrderWithRandomProducts(driver).total(),"Total is = subtotal+tax");
 
         //ToDo: Click on the finish button
-        new P05_Confirm_Order(driver).clickOnFinishButton();
+        new P07_ConfirmOrderWithRandomProducts(driver).clickOnFinishButton();
 
         //ToDo: Take a screenshot
         Utilities.Capturescreenshots(driver, "success Order");
 
         //ToDo: Assert the sub total appears
-        new P05_Confirm_Order(driver).confirmationMessage();
+        new P07_ConfirmOrderWithRandomProducts(driver).confirmationMessage();
     }
 
 }

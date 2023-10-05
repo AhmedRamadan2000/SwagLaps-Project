@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="15" total="21" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-13T19:11:27 EEST" name="SwagLaps" finished-at="2023-09-13T19:11:33 EEST" duration-ms="6188">
+  <suite started-at="2023-10-05T20:56:53 EEST" name="Nop commerce" finished-at="2023-10-05T20:56:53 EEST" duration-ms="0">
     <groups>
     </groups>
-    <test started-at="2023-09-13T19:11:27 EEST" name="Confirmation Order" finished-at="2023-09-13T19:11:33 EEST" duration-ms="6188">
-      <class name="testcases.TC05_Confirm_Order">
-        <test-method is-config="true" signature="setupChromeDriver(java.lang.String)[pri:0, instance:testcases.TC05_Confirm_Order@4930539b]" started-at="2023-09-13T19:11:27 EEST" name="setupChromeDriver" finished-at="2023-09-13T19:11:31 EEST" duration-ms="4601" status="PASS">
+  </suite> <!-- Nop commerce -->
+  <suite started-at="2023-10-05T20:54:20 EEST" name="SwagLaps" finished-at="2023-10-05T20:56:06 EEST" duration-ms="106002">
+    <groups>
+    </groups>
+    <test started-at="2023-10-05T20:54:20 EEST" name="Check login with valid username and password" finished-at="2023-10-05T20:55:17 EEST" duration-ms="56910">
+      <class name="testcases.TC01_LoginPage">
+        <test-method is-config="true" signature="setupChromeDriver(java.lang.String)[pri:0, instance:testcases.TC01_LoginPage@6ddee60f]" started-at="2023-10-05T20:54:20 EEST" name="setupChromeDriver" finished-at="2023-10-05T20:54:23 EEST" duration-ms="3394" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,47 +22,134 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupChromeDriver -->
-        <test-method signature="Confirm_Order()[pri:0, instance:testcases.TC05_Confirm_Order@4930539b]" started-at="2023-09-13T19:11:31 EEST" name="Confirm_Order" finished-at="2023-09-13T19:11:33 EEST" duration-ms="1553" status="FAIL">
-          <exception class="java.lang.ExceptionInInitializerError">
-            <full-stacktrace>
-              <![CDATA[java.lang.ExceptionInInitializerError
-at testcases.TC05_Confirm_Order.Confirm_Order(TC05_Confirm_Order.java:27)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:808)
-at org.testng.TestRunner.run(TestRunner.java:603)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
-at org.testng.SuiteRunner.run(SuiteRunner.java:326)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-at org.testng.TestNG.runSuites(TestNG.java:1092)
-at org.testng.TestNG.run(TestNG.java:1060)
-at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-Caused by: java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElements(org.openqa.selenium.By)" because "pages.P02_AddProductsToCart.driver" is null
-at pages.P02_AddProductsToCart.getPricesFromCart(P02_AddProductsToCart.java:44)
-at pages.P02_AddProductsToCart.<clinit>(P02_AddProductsToCart.java:63)
-... 26 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.ExceptionInInitializerError -->
+        <test-method signature="loginWithValidEmailAndValidPassword_P()[pri:1, instance:testcases.TC01_LoginPage@6ddee60f]" started-at="2023-10-05T20:54:23 EEST" name="loginWithValidEmailAndValidPassword_P" description="Check login with valid username and password" finished-at="2023-10-05T20:55:16 EEST" duration-ms="52095" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithValidEmailAndValidPassword_P -->
+        <test-method is-config="true" signature="quite()[pri:0, instance:testcases.TC01_LoginPage@6ddee60f]" started-at="2023-10-05T20:55:16 EEST" name="quite" finished-at="2023-10-05T20:55:17 EEST" duration-ms="1223" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quite -->
+      </class> <!-- testcases.TC01_LoginPage -->
+    </test> <!-- Check login with valid username and password -->
+    <test started-at="2023-10-05T20:55:17 EEST" name="Confirmation Order" finished-at="2023-10-05T20:56:06 EEST" duration-ms="49058">
+      <class name="testcases.TC06_ConfirmOrder">
+        <test-method is-config="true" signature="setupChromeDriver(java.lang.String)[pri:0, instance:testcases.TC06_ConfirmOrder@27b490de]" started-at="2023-10-05T20:55:17 EEST" name="setupChromeDriver" finished-at="2023-10-05T20:55:19 EEST" duration-ms="1916" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupChromeDriver -->
+        <test-method signature="Confirm_Order()[pri:0, instance:testcases.TC06_ConfirmOrder@27b490de]" started-at="2023-10-05T20:55:19 EEST" name="Confirm_Order" finished-at="2023-10-05T20:56:06 EEST" duration-ms="46918" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Confirm_Order -->
-      </class> <!-- testcases.TC05_Confirm_Order -->
+        <test-method is-config="true" signature="quite()[pri:0, instance:testcases.TC06_ConfirmOrder@27b490de]" started-at="2023-10-05T20:56:06 EEST" name="quite" finished-at="2023-10-05T20:56:06 EEST" duration-ms="219" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quite -->
+      </class> <!-- testcases.TC06_ConfirmOrder -->
     </test> <!-- Confirmation Order -->
   </suite> <!-- SwagLaps -->
+  <suite started-at="2023-10-05T20:56:06 EEST" name="SwagLaps (0)" finished-at="2023-10-05T20:56:53 EEST" duration-ms="46778">
+    <groups>
+    </groups>
+    <test started-at="2023-10-05T20:56:06 EEST" name="Check login with valid username and password" finished-at="2023-10-05T20:56:41 EEST" duration-ms="34948">
+      <class name="testcases.TC01_LoginPage">
+        <test-method is-config="true" signature="setupChromeDriver(java.lang.String)[pri:0, instance:testcases.TC01_LoginPage@7d5ef1c3]" started-at="2023-10-05T20:56:06 EEST" name="setupChromeDriver" finished-at="2023-10-05T20:56:08 EEST" duration-ms="2117" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupChromeDriver -->
+        <test-method signature="loginWithValidEmailAndValidPassword_P()[pri:1, instance:testcases.TC01_LoginPage@7d5ef1c3]" started-at="2023-10-05T20:56:08 EEST" name="loginWithValidEmailAndValidPassword_P" description="Check login with valid username and password" finished-at="2023-10-05T20:56:40 EEST" duration-ms="31647" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithValidEmailAndValidPassword_P -->
+        <test-method is-config="true" signature="quite()[pri:0, instance:testcases.TC01_LoginPage@7d5ef1c3]" started-at="2023-10-05T20:56:40 EEST" name="quite" finished-at="2023-10-05T20:56:41 EEST" duration-ms="1180" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quite -->
+      </class> <!-- testcases.TC01_LoginPage -->
+    </test> <!-- Check login with valid username and password -->
+    <test started-at="2023-10-05T20:56:41 EEST" name="Check login with valid username and Invalid password" finished-at="2023-10-05T20:56:45 EEST" duration-ms="3639">
+      <class name="testcases.TC01_LoginPage">
+        <test-method is-config="true" signature="setupChromeDriver(java.lang.String)[pri:0, instance:testcases.TC01_LoginPage@3dec79f8]" started-at="2023-10-05T20:56:41 EEST" name="setupChromeDriver" finished-at="2023-10-05T20:56:43 EEST" duration-ms="1764" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupChromeDriver -->
+        <test-method signature="loginWithValidEmailAndInvalidPassword_N()[pri:2, instance:testcases.TC01_LoginPage@3dec79f8]" started-at="2023-10-05T20:56:43 EEST" name="loginWithValidEmailAndInvalidPassword_N" description="Check login with valid username and Invalid password" finished-at="2023-10-05T20:56:43 EEST" duration-ms="671" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithValidEmailAndInvalidPassword_N -->
+        <test-method is-config="true" signature="quite()[pri:0, instance:testcases.TC01_LoginPage@3dec79f8]" started-at="2023-10-05T20:56:43 EEST" name="quite" finished-at="2023-10-05T20:56:45 EEST" duration-ms="1201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quite -->
+      </class> <!-- testcases.TC01_LoginPage -->
+    </test> <!-- Check login with valid username and Invalid password -->
+    <test started-at="2023-10-05T20:56:45 EEST" name="Check login with invalid username and valid password" finished-at="2023-10-05T20:56:48 EEST" duration-ms="3846">
+      <class name="testcases.TC01_LoginPage">
+        <test-method is-config="true" signature="setupChromeDriver(java.lang.String)[pri:0, instance:testcases.TC01_LoginPage@4f4d05b3]" started-at="2023-10-05T20:56:45 EEST" name="setupChromeDriver" finished-at="2023-10-05T20:56:46 EEST" duration-ms="1885" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupChromeDriver -->
+        <test-method signature="loginWithInvalidEmailAndValidPassword_N()[pri:3, instance:testcases.TC01_LoginPage@4f4d05b3]" started-at="2023-10-05T20:56:46 EEST" name="loginWithInvalidEmailAndValidPassword_N" description="Check login with invalid username and valid password" finished-at="2023-10-05T20:56:47 EEST" duration-ms="725" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithInvalidEmailAndValidPassword_N -->
+        <test-method is-config="true" signature="quite()[pri:0, instance:testcases.TC01_LoginPage@4f4d05b3]" started-at="2023-10-05T20:56:47 EEST" name="quite" finished-at="2023-10-05T20:56:48 EEST" duration-ms="1232" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quite -->
+      </class> <!-- testcases.TC01_LoginPage -->
+    </test> <!-- Check login with invalid username and valid password -->
+    <test started-at="2023-10-05T20:56:48 EEST" name="Check login with invalid username and invalid password" finished-at="2023-10-05T20:56:53 EEST" duration-ms="4302">
+      <class name="testcases.TC01_LoginPage">
+        <test-method is-config="true" signature="setupChromeDriver(java.lang.String)[pri:0, instance:testcases.TC01_LoginPage@1e194966]" started-at="2023-10-05T20:56:48 EEST" name="setupChromeDriver" finished-at="2023-10-05T20:56:51 EEST" duration-ms="2224" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupChromeDriver -->
+        <test-method signature="loginWithInvalidEmailAndInvalidPassword_N()[pri:4, instance:testcases.TC01_LoginPage@1e194966]" started-at="2023-10-05T20:56:51 EEST" name="loginWithInvalidEmailAndInvalidPassword_N" description="Check login with invalid username and invalid password" finished-at="2023-10-05T20:56:51 EEST" duration-ms="768" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithInvalidEmailAndInvalidPassword_N -->
+        <test-method is-config="true" signature="quite()[pri:0, instance:testcases.TC01_LoginPage@1e194966]" started-at="2023-10-05T20:56:51 EEST" name="quite" finished-at="2023-10-05T20:56:53 EEST" duration-ms="1295" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quite -->
+      </class> <!-- testcases.TC01_LoginPage -->
+    </test> <!-- Check login with invalid username and invalid password -->
+  </suite> <!-- SwagLaps (0) -->
 </testng-results>

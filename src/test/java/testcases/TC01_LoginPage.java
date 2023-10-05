@@ -1,17 +1,32 @@
 package testcases;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Story;
+import org.json.simple.parser.ParseException;
 import org.testng.annotations.Test;
 import pages.P01_LoginPage;
 import utility.Utilities;
 
+import java.io.IOException;
+@Epic("Login Feature")
+@Story("Login")
 public class TC01_LoginPage extends TestBase {
     //define test data
-    private String Username = "standard_user";
-    private String Password = "secret_sauce";
+//    private String Username = Utilities.getdata(System.getProperty("User.dir")+ "/src/test/resources/data/loginData.json","Username");
+//    private String Password = Utilities.getdata(System.getProperty("User.dir")+ "/src/test/resources/data/loginData.json","Password");
+
+    static String Username = Utilities.getExcelData(1,0,"Sheet1");
+    static String Password = Utilities.getExcelData(1,1,"Sheet1");
+
+    public TC01_LoginPage() throws IOException, ParseException {
+    }
 
     //positive test case
+
     //ToDo: create test case to check login with valid emila nad password
     @Test(priority = 1, description = "Check login with valid username and password")
+    @Description
     public void loginWithValidEmailAndValidPassword_P() {
 
         //ToDo: Login with valid mail and valid password

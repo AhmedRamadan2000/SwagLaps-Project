@@ -4,12 +4,12 @@
   <parameter name="browser" value=""/>
   <test thread-count="5" name="Confirmation Order(failed)">
     <classes>
-      <class name="testcases.TC05_Confirm_Order">
+      <class name="testcases.TC06_ConfirmOrder">
         <methods>
           <include name="Confirm_Order"/>
           <include name="setupChromeDriver"/>
         </methods>
-      </class> <!-- testcases.TC05_Confirm_Order -->
+      </class> <!-- testcases.TC06_ConfirmOrder -->
     </classes>
   </test> <!-- Confirmation Order(failed) -->
 </suite> <!-- Failed suite [SwagLaps] -->

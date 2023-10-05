@@ -1,32 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="SwagLaps">
-    <parameter name="browser" value=""/>
-<!--    <test name="Check login with valid username and password">-->
-<!--        <classes>-->
-<!--            <class name="testcases.TC01_LoginPage">-->
-<!--                <methods>-->
-<!--                    <include name="loginWithValidEmailAndValidPassword_P"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="Add all products to the shopping cart">-->
-<!--        <classes>-->
-<!--            <class name="testcases.TC02_AddProductsToCart">-->
-<!--                <methods>-->
-<!--                    <include name="Add_Products_To_Shopping_Cart"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
-    <test name="Confirmation Order">
-        <classes>
-            <class name="testcases.TC05_Confirm_Order">
-                <methods>
-                    <include name="Confirm_Order"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
+<suite name="Nop commerce">
+    <suite-files>
+        <suite-file path="allScenarios.xml"></suite-file>
+        <suite-file path="negativeScenarios.xml"></suite-file>
+    </suite-files>
 </suite>

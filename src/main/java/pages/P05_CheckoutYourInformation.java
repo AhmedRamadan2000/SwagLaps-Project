@@ -3,11 +3,11 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class P04_Checkout_Your_Information {
+public class P05_CheckoutYourInformation {
     WebDriver driver;
 
     //ToDo: define driver
-    public P04_Checkout_Your_Information(WebDriver driver) {
+    public P05_CheckoutYourInformation(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -19,22 +19,22 @@ public class P04_Checkout_Your_Information {
     private final By pageTitle = By.xpath("//div[@class='subheader']");
 
     //ToDo: add action methods
-    public P04_Checkout_Your_Information addFirstName(String firstName) {
+    public P05_CheckoutYourInformation addFirstName(String firstName) {
         driver.findElement(this.firstName).sendKeys(firstName);
         return this;
     }
 
-    public P04_Checkout_Your_Information addLastName(String lastName) {
+    public P05_CheckoutYourInformation addLastName(String lastName) {
         driver.findElement(this.lastName).sendKeys(lastName);
         return this;
     }
 
-    public P04_Checkout_Your_Information addPostalCode(String code) {
+    public P05_CheckoutYourInformation addPostalCode(String code) {
         driver.findElement(this.postalCode).sendKeys(code);
         return this;
     }
 
-    public P04_Checkout_Your_Information ClickOnContinueButton() {
+    public P05_CheckoutYourInformation ClickOnContinueButton() {
         driver.findElement(this.continueButton).click();
         return this;
     }

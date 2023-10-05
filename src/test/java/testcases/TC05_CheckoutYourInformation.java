@@ -1,16 +1,12 @@
 package testcases;
 
 import com.github.javafaker.Faker;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.*;
 import utility.Utilities;
 
-import java.util.List;
-
-public class TC04_Checkout_Your_Information extends TestBase{
+public class TC05_CheckoutYourInformation extends TestBase{
 
     private String Username = "standard_user";
     private String Password = "secret_sauce";
@@ -32,19 +28,19 @@ public class TC04_Checkout_Your_Information extends TestBase{
         Utilities.Capturescreenshots(driver, "AddProductsToShoppingCart");
 
         //ToDo: Assert products are added to shopping cart
-        Assert.assertTrue(new P03_CheckoutOrder(driver).checkCheckOutButtonAppear());
+        Assert.assertTrue(new P04_CheckoutOrder(driver).checkCheckOutButtonAppear());
 
         //ToDo: Click on the checkout button
-        new P03_CheckoutOrder(driver).ClickOnCheckOutButton();
+        new P04_CheckoutOrder(driver).ClickOnCheckOutButton();
 
         //ToDo: Assert the user in the Checkout Information page
-        new P04_Checkout_Your_Information(driver).PageTitle();
+        new P05_CheckoutYourInformation(driver).PageTitle();
 
         //ToDo: Add Checkout Information
-        new P04_Checkout_Your_Information(driver).addFirstName(firstname).addLastName(lastname).addPostalCode(code);
+        new P05_CheckoutYourInformation(driver).addFirstName(firstname).addLastName(lastname).addPostalCode(code);
         //ToDo: Take a screenshot
         Utilities.Capturescreenshots(driver, "Checkout Information2");
 
-        new P04_Checkout_Your_Information(driver).ClickOnContinueButton();
+        new P05_CheckoutYourInformation(driver).ClickOnContinueButton();
     }
 }
