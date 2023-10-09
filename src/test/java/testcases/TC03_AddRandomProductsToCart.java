@@ -4,10 +4,9 @@ import org.testng.annotations.Test;
 import pages.P01_LoginPage;
 import pages.P03_AddRandomProductsToCart;
 import utility.Utilities;
+import static testcases.TC01_LoginPage.*;
 
 public class TC03_AddRandomProductsToCart extends TestBase {
-    private String Username = "standard_user";
-    private String Password = "secret_sauce";
 
     //positive test case
     //ToDo: create test case to Add Products To Shopping Cart

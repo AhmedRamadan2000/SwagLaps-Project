@@ -2,7 +2,8 @@ package drivers;
 
 import org.openqa.selenium.WebDriver;
 
-public class DriverHolder {
+public class
+DriverHolder {
 
     // TODO: define local thread from driver
     private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();

@@ -26,6 +26,8 @@ public class TestBase {
 
     @AfterTest
     public void quite() {
-        driver.quit();
+        if (driver != null) {
+            driver.quit();
+        }
     }
 }

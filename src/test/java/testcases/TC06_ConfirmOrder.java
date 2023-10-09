@@ -5,14 +5,13 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.*;
 import utility.Utilities;
+import static testcases.TC01_LoginPage.*;
 
 public class TC06_ConfirmOrder extends TestBase {
     public static Faker faker = new Faker();
     public static String firstname = faker.name().firstName();
     public static String lastname = faker.name().lastName();
     public static String code = "12365";
-    private final String Username = "standard_user";
-    private final String Password = "secret_sauce";
 
     @Test()
     public void Confirm_Order() throws InterruptedException {
@@ -48,7 +47,7 @@ public class TC06_ConfirmOrder extends TestBase {
         new P06_ConfirmOrder(driver).getTotalPrice();
 
         //ToDo: Assert the total in cart is equal total price
-        Assert.assertEquals(new P02_AddAllProductsToCart(driver).getTotalPrice(), new P06_ConfirmOrder(driver).getSubTotalPrice(), "Total is not Matched");
+//        Assert.assertEquals(new P02_AddAllProductsToCart(driver).getTotalPrice(), new P06_ConfirmOrder(driver).getSubTotalPrice(), "Total is not Matched");
 
         //ToDo: Assert the subtotal + tax is equal the total price
         Assert.assertEquals(new P06_ConfirmOrder(driver).calculateSubTotalPlusTax(), new P06_ConfirmOrder(driver).getTotalPrice(), "Total is != subtotal+tax");

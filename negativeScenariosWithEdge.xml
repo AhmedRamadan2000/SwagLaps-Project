@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SwagLaps">
+    <parameter name="browser" value="edge"/>
+        <test name="Check login with valid username and Invalid password">
+            <classes>
+                <class name="testcases.TC01_LoginPage">
+                    <methods>
+                        <include name="loginWithValidEmailAndInvalidPassword_N"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="Check login with invalid username and valid password">
+            <classes>
+                <class name="testcases.TC01_LoginPage">
+                    <methods>
+                        <include name="loginWithInvalidEmailAndValidPassword_N"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="Check login with invalid username and invalid password">
+            <classes>
+                <class name="testcases.TC01_LoginPage">
+                    <methods>
+                        <include name="loginWithInvalidEmailAndInvalidPassword_N"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+</suite>

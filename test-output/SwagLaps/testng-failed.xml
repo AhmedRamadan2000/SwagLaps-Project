@@ -1,15 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [SwagLaps]" guice-stage="DEVELOPMENT">
-  <parameter name="browser" value=""/>
-  <test thread-count="5" name="Confirmation Order(failed)">
+  <parameter name="" value=""/>
+  <test thread-count="5" name="Check login with valid username and Invalid password(failed)">
     <classes>
-      <class name="testcases.TC06_ConfirmOrder">
+      <class name="testcases.TC01_LoginPage">
         <methods>
-          <include name="Confirm_Order"/>
+          <include name="loginWithValidEmailAndInvalidPassword_N"/>
           <include name="setupChromeDriver"/>
+          <include name="quite"/>
         </methods>
-      </class> <!-- testcases.TC06_ConfirmOrder -->
+      </class> <!-- testcases.TC01_LoginPage -->
     </classes>
-  </test> <!-- Confirmation Order(failed) -->
+  </test> <!-- Check login with valid username and Invalid password(failed) -->
+  <test thread-count="5" name="Check login with invalid username and valid password(failed)">
+    <classes>
+      <class name="testcases.TC01_LoginPage">
+        <methods>
+          <include name="loginWithInvalidEmailAndValidPassword_N"/>
+          <include name="setupChromeDriver"/>
+          <include name="quite"/>
+        </methods>
+      </class> <!-- testcases.TC01_LoginPage -->
+    </classes>
+  </test> <!-- Check login with invalid username and valid password(failed) -->
+  <test thread-count="5" name="Check login with invalid username and invalid password(failed)">
+    <classes>
+      <class name="testcases.TC01_LoginPage">
+        <methods>
+          <include name="setupChromeDriver"/>
+          <include name="loginWithInvalidEmailAndInvalidPassword_N"/>
+          <include name="quite"/>
+        </methods>
+      </class> <!-- testcases.TC01_LoginPage -->
+    </classes>
+  </test> <!-- Check login with invalid username and invalid password(failed) -->
 </suite> <!-- Failed suite [SwagLaps] -->

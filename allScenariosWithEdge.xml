@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SwagLaps">
+    <parameter name="browser" value="edge"/>
+    <test name="Check login with valid username and password">
+        <classes>
+            <class name="testcases.TC01_LoginPage">
+                <methods>
+                    <include name="loginWithValidEmailAndValidPassword_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Confirmation Order">
+        <classes>
+            <class name="testcases.TC06_ConfirmOrder">
+                <methods>
+                    <include name="Confirm_Order"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,13 +1,17 @@
 package testcases;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Story;
 import org.testng.annotations.Test;
 import pages.P01_LoginPage;
 import pages.P02_AddAllProductsToCart;
 import utility.Utilities;
+import static testcases.TC01_LoginPage.*;
 
+
+@Epic("Add Products Feature")
+@Story("Add products to cart")
 public class TC02_AddAllProductsToCart extends TestBase {
-    private String Username = "standard_user";
-    private String Password = "secret_sauce";
 
     //positive test case
     //ToDo: create test case to Add Products To Shopping Cart
@@ -22,8 +26,8 @@ public class TC02_AddAllProductsToCart extends TestBase {
 
         //ToDo: Take a screenshot
         Utilities.Capturescreenshots(driver, "AddProductsToShoppingCart");
-
     }
+
     @Test(priority = 2, description = "Add Random Products To Shopping Cart")
     public void Add_Random_Products_To_Shopping_Cart() throws InterruptedException {
 

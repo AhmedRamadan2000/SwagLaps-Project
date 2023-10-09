@@ -1,15 +1,18 @@
 package testcases;
 
 import com.github.javafaker.Faker;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Story;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.*;
 import utility.Utilities;
+import static testcases.TC01_LoginPage.*;
 
+@Epic("Confirm Order Feature")
+@Story("Confirm the order information")
 public class TC05_CheckoutYourInformation extends TestBase{
 
-    private String Username = "standard_user";
-    private String Password = "secret_sauce";
     public static Faker faker = new Faker();
     public static String firstname = faker.name().firstName();
     public static String lastname = faker.name().lastName();
