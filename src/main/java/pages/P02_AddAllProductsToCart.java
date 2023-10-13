@@ -2,11 +2,8 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import utility.NumberGenerator;
 import utility.Utilities;
-
-import java.util.List;
 
 public class P02_AddAllProductsToCart {
     static float totalprice = 0;
@@ -26,15 +23,16 @@ public class P02_AddAllProductsToCart {
         return this;
     }
 
-    public P02_AddAllProductsToCart addProductToCart(){
+    public P02_AddAllProductsToCart addProductToCart() {
         for (int i = 3; i <= 8; i++) {
-            driver.findElement(By.xpath("(//button)["+i+"]")).click();
-            totalprice += Utilities.removeFirstLetterAndReturnFloat(driver.findElement(By.xpath("(//div[@class=\"inventory_item_price\"])["+(i-2)+"]")).getText());
+            driver.findElement(By.xpath("(//button)[" + i + "]")).click();
+            totalprice += Utilities.removeFirstLetterAndReturnFloat(driver.findElement(By.xpath("(//div[@class=\"inventory_item_price\"])[" + (i - 2) + "]")).getText());
         }
         System.out.println(totalprice);
         return this;
     }
 
+    //Another Way
     public P02_AddAllProductsToCart addproducttocart(int numberOfProductsToAdd) throws InterruptedException {
         generator = new NumberGenerator();
         for (int i = 1; i <= numberOfProductsToAdd; i++) {

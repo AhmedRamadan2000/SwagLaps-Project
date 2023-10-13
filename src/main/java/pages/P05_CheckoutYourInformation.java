@@ -4,19 +4,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class P05_CheckoutYourInformation {
-    WebDriver driver;
-
-    //ToDo: define driver
-    public P05_CheckoutYourInformation(WebDriver driver) {
-        this.driver = driver;
-    }
-
     //ToDo: define locators
     private final By firstName = By.id("first-name");
     private final By lastName = By.id("last-name");
     private final By postalCode = By.id("postal-code");
     private final By continueButton = By.xpath("//input[@class='btn_primary cart_button']");
     private final By pageTitle = By.xpath("//div[@class='subheader']");
+    WebDriver driver;
+    //ToDo: define driver
+    public P05_CheckoutYourInformation(WebDriver driver) {
+        this.driver = driver;
+    }
 
     //ToDo: add action methods
     public P05_CheckoutYourInformation addFirstName(String firstName) {

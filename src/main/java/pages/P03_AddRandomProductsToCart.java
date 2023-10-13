@@ -3,22 +3,22 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class P03_AddRandomProductsToCart {
-    WebDriver driver;
+    //ToDo: define locators
+    private final By shoppingCartIcon = By.id("shopping_cart_container");
     public double TotalPrice;
+    WebDriver driver;
 
     //ToDo: define driver
     public P03_AddRandomProductsToCart(WebDriver driver) {
         this.driver = driver;
     }
-
-    //ToDo: define locators
-    private final By shoppingCartIcon = By.id("shopping_cart_container");
 
     //ToDo: add action methods
 
@@ -54,7 +54,7 @@ public class P03_AddRandomProductsToCart {
             System.out.println(productPrice);
         }
         System.out.println("Total price: " + TotalPrice);
-       return this;
+        return this;
     }
 
     public double getTotalPrice() {

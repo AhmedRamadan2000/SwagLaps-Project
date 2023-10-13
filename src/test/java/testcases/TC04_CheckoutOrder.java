@@ -9,7 +9,8 @@ import pages.P02_AddAllProductsToCart;
 import pages.P04_CheckoutOrder;
 import utility.Utilities;
 
-import static testcases.TC01_LoginPage.*;
+import static testcases.TC01_LoginPage.Password;
+import static testcases.TC01_LoginPage.Username;
 
 @Epic("Check out Feature")
 @Story("Click on check out order")

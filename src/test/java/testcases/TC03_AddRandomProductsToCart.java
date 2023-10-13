@@ -4,7 +4,9 @@ import org.testng.annotations.Test;
 import pages.P01_LoginPage;
 import pages.P03_AddRandomProductsToCart;
 import utility.Utilities;
-import static testcases.TC01_LoginPage.*;
+
+import static testcases.TC01_LoginPage.Password;
+import static testcases.TC01_LoginPage.Username;
 
 public class TC03_AddRandomProductsToCart extends TestBase {
 

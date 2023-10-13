@@ -7,16 +7,16 @@ import pages.*;
 import utility.Utilities;
 
 public class TC07_ConfirmOrderWithRandomProducts extends TestBase {
-    private final String Username = "standard_user";
-    private final String Password = "secret_sauce";
     public static Faker faker = new Faker();
     public static String firstname = faker.name().firstName();
     public static String lastname = faker.name().lastName();
     public static String code = "12365";
-public double totalofproductsprices =new P03_AddRandomProductsToCart(driver).getTotalPrice();
+    private final String Username = "standard_user";
+    private final String Password = "secret_sauce";
+    public double totalofproductsprices = new P03_AddRandomProductsToCart(driver).getTotalPrice();
 
     @Test()
-    public void Confirm_Order() throws InterruptedException {
+    public void Confirm_Order() {
 
         //ToDo: Login to site
         new P01_LoginPage(driver).enterEmail(Username).enterPassword(Password).clickLoginButton();
@@ -49,10 +49,10 @@ public double totalofproductsprices =new P03_AddRandomProductsToCart(driver).get
         new P07_ConfirmOrderWithRandomProducts(driver).total();
 
         //ToDo: Assert the total in cart is equal total price
-//       Assert.assertEquals(totalofproductsprices,new P07_ConfirmOrderWithRandomProducts(driver).getSubTotal(),"The total item prices in cart is equal total price");
+        Assert.assertEquals(totalofproductsprices, new P07_ConfirmOrderWithRandomProducts(driver).getSubTotal(), "The total item prices in cart is equal total price");
 
         //ToDo: Assert the subtotal + tax is equal the total price
-        Assert.assertEquals(new P07_ConfirmOrderWithRandomProducts(driver).calculateSubTotalPlusTax(),new P07_ConfirmOrderWithRandomProducts(driver).total(),"Total is = subtotal+tax");
+        Assert.assertEquals(new P07_ConfirmOrderWithRandomProducts(driver).calculateSubTotalPlusTax(), new P07_ConfirmOrderWithRandomProducts(driver).total(), "Total is = subtotal+tax");
 
         //ToDo: Click on the finish button
         new P07_ConfirmOrderWithRandomProducts(driver).clickOnFinishButton();
@@ -63,5 +63,4 @@ public double totalofproductsprices =new P03_AddRandomProductsToCart(driver).get
         //ToDo: Assert the sub total appears
         new P07_ConfirmOrderWithRandomProducts(driver).confirmationMessage();
     }
-
 }

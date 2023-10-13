@@ -9,15 +9,13 @@ import pages.P01_LoginPage;
 import utility.Utilities;
 
 import java.io.IOException;
+
 @Epic("Login Feature")
 @Story("Login")
 public class TC01_LoginPage extends TestBase {
     //define test data
-//    private String Username = Utilities.getdata(System.getProperty("User.dir")+ "/src/test/resources/data/loginData.json","Username");
-//    private String Password = Utilities.getdata(System.getProperty("User.dir")+ "/src/test/resources/data/loginData.json","Password");
-
-    static String Username = Utilities.getExcelData(1,0,"Sheet1");
-    static String Password = Utilities.getExcelData(1,1,"Sheet1");
+    static String Username = Utilities.getExcelData(1, 0, "Sheet1");
+    static String Password = Utilities.getExcelData(1, 1, "Sheet1");
 
     public TC01_LoginPage() throws IOException, ParseException {
     }

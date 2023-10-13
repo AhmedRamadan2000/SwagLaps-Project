@@ -6,20 +6,18 @@ import org.openqa.selenium.WebDriver;
 import static pages.P02_AddAllProductsToCart.totalprice;
 
 public class P06_ConfirmOrder {
-     WebDriver driver;
+    private final By subTotal = By.xpath("//div[@class='summary_subtotal_label']");
+    private final By tax = By.xpath("//div[@class='summary_tax_label']");
 
+    //ToDo: define locators
+    private final By total = By.xpath("//div[@class='summary_total_label']");
+    private final By finishButton = By.xpath("//a[@class='btn_action cart_button']");
+    private final By confirmationMessage = By.xpath("//h2[@class='complete-header']");
+    WebDriver driver;
     //ToDo: define driver
     public P06_ConfirmOrder(WebDriver driver) {
         this.driver = driver;
     }
-
-    //ToDo: define locators
-
-    private final By subTotal = By.xpath("//div[@class='summary_subtotal_label']");
-    private final By tax = By.xpath("//div[@class='summary_tax_label']");
-    private final By total = By.xpath("//div[@class='summary_total_label']");
-    private final By finishButton = By.xpath("//a[@class='btn_action cart_button']");
-    private final By confirmationMessage = By.xpath("//h2[@class='complete-header']");
 
     //ToDo: add action methods
     public P06_ConfirmOrder clickOnFinishButton() {
@@ -28,15 +26,15 @@ public class P06_ConfirmOrder {
     }
 
     public boolean getSubTotal() {
-        return driver.findElement(this.subTotal).getText().equals("Item total: $"+totalprice);
+        return driver.findElement(this.subTotal).getText().equals("Item total: $" + totalprice);
     }
 
     public boolean tax() {
         return driver.findElement(this.tax).getText().equals("Tax: 10.40");
     }
 
-    public float taxs(){
-        return Float.parseFloat(driver.findElement(this.tax).getText().replace("Tax: $",""));
+    public float taxs() {
+        return Float.parseFloat(driver.findElement(this.tax).getText().replace("Tax: $", ""));
     }
 
     public boolean total() {
@@ -48,7 +46,7 @@ public class P06_ConfirmOrder {
     }
 
     public String getSubTotalPrice() {
-    return driver.findElement(this.subTotal).getText().replace("Item total: $", "");
+        return driver.findElement(this.subTotal).getText().replace("Item total: $", "");
     }
 
     public String calculateSubTotalPlusTax() {

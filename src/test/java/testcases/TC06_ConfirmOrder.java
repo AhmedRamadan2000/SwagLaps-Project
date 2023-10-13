@@ -5,7 +5,9 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.*;
 import utility.Utilities;
-import static testcases.TC01_LoginPage.*;
+
+import static testcases.TC01_LoginPage.Password;
+import static testcases.TC01_LoginPage.Username;
 
 public class TC06_ConfirmOrder extends TestBase {
     public static Faker faker = new Faker();
@@ -14,7 +16,7 @@ public class TC06_ConfirmOrder extends TestBase {
     public static String code = "12365";
 
     @Test()
-    public void Confirm_Order() throws InterruptedException {
+    public void Confirm_Order() {
 
         //ToDo: Login to site
         new P01_LoginPage(driver).enterEmail(Username).enterPassword(Password).clickLoginButton();
@@ -47,7 +49,7 @@ public class TC06_ConfirmOrder extends TestBase {
         new P06_ConfirmOrder(driver).getTotalPrice();
 
         //ToDo: Assert the total in cart is equal total price
-//        Assert.assertEquals(new P02_AddAllProductsToCart(driver).getTotalPrice(), new P06_ConfirmOrder(driver).getSubTotalPrice(), "Total is not Matched");
+        Assert.assertEquals(new P02_AddAllProductsToCart(driver).getTotalPrice(), new P06_ConfirmOrder(driver).getSubTotalPrice(), "Total is not Matched");
 
         //ToDo: Assert the subtotal + tax is equal the total price
         Assert.assertEquals(new P06_ConfirmOrder(driver).calculateSubTotalPlusTax(), new P06_ConfirmOrder(driver).getTotalPrice(), "Total is != subtotal+tax");

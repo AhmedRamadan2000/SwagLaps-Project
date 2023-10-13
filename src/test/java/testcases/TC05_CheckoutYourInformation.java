@@ -5,13 +5,17 @@ import io.qameta.allure.Epic;
 import io.qameta.allure.Story;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.*;
+import pages.P01_LoginPage;
+import pages.P04_CheckoutOrder;
+import pages.P05_CheckoutYourInformation;
 import utility.Utilities;
-import static testcases.TC01_LoginPage.*;
+
+import static testcases.TC01_LoginPage.Password;
+import static testcases.TC01_LoginPage.Username;
 
 @Epic("Confirm Order Feature")
 @Story("Confirm the order information")
-public class TC05_CheckoutYourInformation extends TestBase{
+public class TC05_CheckoutYourInformation extends TestBase {
 
     public static Faker faker = new Faker();
     public static String firstname = faker.name().firstName();
@@ -23,9 +27,6 @@ public class TC05_CheckoutYourInformation extends TestBase{
 
         //ToDo: Login to site
         new P01_LoginPage(driver).enterEmail(Username).enterPassword(Password).clickLoginButton();
-
-        //ToDo: Adding the Products To Shopping Cart
-//        new P02_AddProductsToCart(driver).addProductsToCart();
 
         //ToDo: Take a screenshot
         Utilities.Capturescreenshots(driver, "AddProductsToShoppingCart");

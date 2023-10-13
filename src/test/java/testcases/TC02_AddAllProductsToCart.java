@@ -6,7 +6,9 @@ import org.testng.annotations.Test;
 import pages.P01_LoginPage;
 import pages.P02_AddAllProductsToCart;
 import utility.Utilities;
-import static testcases.TC01_LoginPage.*;
+
+import static testcases.TC01_LoginPage.Password;
+import static testcases.TC01_LoginPage.Username;
 
 
 @Epic("Add Products Feature")
@@ -16,7 +18,7 @@ public class TC02_AddAllProductsToCart extends TestBase {
     //positive test case
     //ToDo: create test case to Add Products To Shopping Cart
     @Test(priority = 1, description = "Add Products To Shopping Cart")
-    public void Add_Products_To_Shopping_Cart() throws InterruptedException {
+    public void Add_Products_To_Shopping_Cart() {
 
         //ToDo: Login with valid mail and valid password
         new P01_LoginPage(driver).enterEmail(Username).enterPassword(Password).clickLoginButton();

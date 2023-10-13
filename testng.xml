@@ -2,9 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="SwagLaps">
     <suite-files>
-        <suite-file path="allScenarios.xml"></suite-file>
-        <suite-file path="negativeScenarios.xml"></suite-file>
-        <suite-file path="allScenariosWithEdge.xml"></suite-file>
-        <suite-file path="negativeScenariosWithEdge.xml"></suite-file>
+        <suite-file path="allScenariosWithChrome.xml"/>
+        <suite-file path="allScenariosWithEdge.xml"/>
+        <suite-file path="allScenariosWithFireFox.xml"/>
+        <suite-file path="negativeScenarios.xml"/>
     </suite-files>
 </suite>
